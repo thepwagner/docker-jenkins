@@ -7,8 +7,7 @@ RUN apt-get update \
  && apt-get clean
 RUN echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list
 RUN apt-get update \
- && apt-get -y install docker-engine \
+ && apt-get -y install docker-engine=1.9.1-0~jessie \
  && apt-get clean
 RUN usermod -G docker jenkins
-USER jenkins
 
